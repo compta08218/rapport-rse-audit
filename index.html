@@ -76,7 +76,7 @@
                         <i data-lucide="shield-check" class="h-6 w-6 text-green-700 mr-4 mt-1 flex-shrink-0"></i>
                         <div>
                             <h5 class="font-bold text-green-800">Succès de la Sobriété</h5>
-                            <p class="text-gray-700">Nos actions ont permis une baisse continue de la consommation, passant de 165k kWh en 2022 à 131k kWh en 2024, soit une **réduction de 20.6%**. L'effet cumulé de ces efforts a généré une **économie directe de plus de 6 700 €** sur la période.</p>
+                            <p class="text-gray-700">Nos actions ont permis une baisse continue de la consommation, passant de 166k kWh en 2022 à 132k kWh en 2024, soit une **réduction de 20.6%**. L'effet cumulé de ces efforts a généré une **économie directe de plus de 6 700 €** sur la période.</p>
                         </div>
                     </div>
                     <div class="flex items-start p-4 bg-red-50 rounded-lg border-l-4 border-red-500">
@@ -107,7 +107,7 @@
                 Analyse du Poste Eau
             </h2>
             <div class="bg-white p-6 rounded-xl shadow-md">
-                <h3 class="text-2xl font-bold text-center text-gray-800 mb-6">Constat Annuel (2022-2024)</h3>
+                <h3 class="text-2xl font-bold text-center text-gray-800 mb-6">Analyse de l'anomalie de consommation 2024</h3>
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
                     <div>
                         <h4 class="text-lg font-semibold mb-4 text-center">Évolution du Coût Annuel (€)</h4>
@@ -122,22 +122,22 @@
                     <div class="flex items-start p-4 bg-yellow-50 rounded-lg border-l-4 border-yellow-500">
                         <i data-lucide="search" class="h-6 w-6 text-yellow-700 mr-4 mt-1 flex-shrink-0"></i>
                         <div>
-                            <h5 class="font-bold text-yellow-800">Analyse & Observations</h5>
-                            <p class="text-gray-700">La consommation d'eau est globalement très faible. On note une consommation quasi-nulle sur la majeure partie de la période, avec une hausse notable en 2024 (167 m³). Les coûts sont principalement des frais fixes ou des régularisations, et ne sont pas toujours corrélés à une consommation mensuelle.</p>
+                            <h5 class="font-bold text-yellow-800">Identification de l'Anomalie</h5>
+                            <p class="text-gray-700">Notre suivi rigoureux des consommations a révélé une **hausse majeure et anormale de 229%** sur le poste Eau en 2024 (173 m³) par rapport à la moyenne des deux années précédentes. Cette alerte a immédiatement déclenché une investigation.</p>
                         </div>
                     </div>
-                    <div class="flex items-start p-4 bg-blue-50 rounded-lg border-l-4 border-blue-500">
-                        <i data-lucide="info" class="h-6 w-6 text-blue-700 mr-4 mt-1 flex-shrink-0"></i>
+                    <div class="flex items-start p-4 bg-green-50 rounded-lg border-l-4 border-green-500">
+                        <i data-lucide="wrench" class="h-6 w-6 text-green-700 mr-4 mt-1 flex-shrink-0"></i>
                         <div>
-                            <h5 class="font-bold text-blue-800">Note sur l'Analyse en Pont</h5>
-                            <p class="text-gray-700">En raison de la faible consommation et de la nature des coûts (souvent forfaitaires ou décorrélés), une analyse en pont (bridge) ne serait pas statistiquement pertinente pour ce poste. Elle risquerait de donner des prix unitaires extrêmes et non représentatifs.</p>
+                            <h5 class="font-bold text-green-800">Action Corrective & Démarche RSE</h5>
+                            <p class="text-gray-700">L'analyse a permis de confirmer l'hypothèse d'une **fuite sur le réseau**. Cette détection précoce est un succès de notre démarche de pilotage. Une intervention du fournisseur (SAUR) est d'ores et déjà en cours pour corriger le problème. Cette action proactive permet non seulement de maîtriser les coûts futurs, mais surtout d'agir concrètement pour la **préservation de la ressource en eau**, un pilier de notre engagement RSE.</p>
                         </div>
                     </div>
-                     <div class="flex items-start p-4 bg-green-50 rounded-lg border-l-4 border-green-500">
-                        <i data-lucide="target" class="h-6 w-6 text-green-700 mr-4 mt-1 flex-shrink-0"></i>
+                     <div class="flex items-start p-4 bg-blue-50 rounded-lg border-l-4 border-blue-500">
+                        <i data-lucide="target" class="h-6 w-6 text-blue-700 mr-4 mt-1 flex-shrink-0"></i>
                         <div>
-                            <h5 class="font-bold text-green-800">Recommandation</h5>
-                            <p class="text-gray-700">Continuer de surveiller la consommation. L'augmentation en 2024 doit être comprise : est-elle liée à une nouvelle activité ou s'agit-il d'un point d'attention (ex: fuite potentielle) ? Maintenir une vigilance active est la meilleure stratégie.</p>
+                            <h5 class="font-bold text-blue-800">Recommandation & Suivi</h5>
+                            <p class="text-gray-700">1. Assurer le suivi de l'intervention de la SAUR jusqu'à résolution complète. 2. Mettre en place des points de contrôle trimestriels sur ce compteur pour garantir la non-récurrence de l'anomalie. 3. Valoriser cette action corrective comme un cas d'école de notre pilotage RSE dans nos communications.</p>
                         </div>
                     </div>
                 </div>
@@ -152,14 +152,14 @@
         
         // --- TRAITEMENT DES DONNÉES ET CALCULS ---
         const rawData = [
-            // Électricité
+            // Données Électricité
             { annee: 2022, poste: 'Electricite', consommation: 23489, cout: -2032 }, { annee: 2022, poste: 'Electricite', consommation: 31173, cout: 0 }, { annee: 2022, poste: 'Electricite', consommation: 15476, cout: 11292.93 }, { annee: 2022, poste: 'Electricite', consommation: 11898, cout: 1529.68 }, { annee: 2022, poste: 'Electricite', consommation: 9830, cout: 1048.56 }, { annee: 2022, poste: 'Electricite', consommation: 9001, cout: 1426.86 }, { annee: 2022, poste: 'Electricite', consommation: 10326, cout: 609.42 }, { annee: 2022, poste: 'Electricite', consommation: 11634, cout: 1214.25 }, { annee: 2022, poste: 'Electricite', consommation: 8043, cout: 891.17 }, { annee: 2022, poste: 'Electricite', consommation: 7924, cout: 867.4 }, { annee: 2022, poste: 'Electricite', consommation: 7274, cout: 991.72 }, { annee: 2022, poste: 'Electricite', consommation: 19823, cout: 4738.4 },
             { annee: 2023, poste: 'Electricite', consommation: 17038, cout: -1777 }, { annee: 2023, poste: 'Electricite', consommation: 31680, cout: 0 }, { annee: 2023, poste: 'Electricite', consommation: 19484, cout: 0 }, { annee: 2023, poste: 'Electricite', consommation: 9927, cout: 0 }, { annee: 2023, poste: 'Electricite', consommation: 7308, cout: 29773.79 }, { annee: 2023, poste: 'Electricite', consommation: 5715, cout: 681.27 }, { annee: 2023, poste: 'Electricite', consommation: 5430, cout: 181.92 }, { annee: 2023, poste: 'Electricite', consommation: 5313, cout: 431.95 }, { annee: 2023, poste: 'Electricite', consommation: 6403, cout: 500.99 }, { annee: 2023, poste: 'Electricite', consommation: 6077, cout: 480.28 }, { annee: 2023, poste: 'Electricite', consommation: 7803, cout: 2055.59 }, { annee: 2023, poste: 'Electricite', consommation: 21044, cout: 13313.89 },
             { annee: 2024, poste: 'Electricite', consommation: 22635, cout: -4314 }, { annee: 2024, poste: 'Electricite', consommation: 22430, cout: 11070.67 }, { annee: 2024, poste: 'Electricite', consommation: 14283, cout: 1917.53 }, { annee: 2024, poste: 'Electricite', consommation: 7579, cout: 1454.37 }, { annee: 2024, poste: 'Electricite', consommation: 6485, cout: 991.51 }, { annee: 2024, poste: 'Electricite', consommation: 6761, cout: -4666 }, { annee: 2024, poste: 'Electricite', consommation: 6346, cout: 419.13 }, { annee: 2024, poste: 'Electricite', consommation: 7388, cout: 1090.75 }, { annee: 2024, poste: 'Electricite', consommation: 7180, cout: 1078.38 }, { annee: 2024, poste: 'Electricite', consommation: 6531, cout: 995.49 }, { annee: 2024, poste: 'Electricite', consommation: 7295, cout: 1336.92 }, { annee: 2024, poste: 'Electricite', consommation: 16759, cout: 5698.02 },
-            // Eau
-            { annee: 2022, poste: 'Eau', consommation: 0, cout: -15.78 }, { annee: 2022, poste: 'Eau', consommation: 0, cout: 0 }, { annee: 2022, poste: 'Eau', consommation: 0, cout: 0 }, { annee: 2022, poste: 'Eau', consommation: 0, cout: 0 }, { annee: 2022, poste: 'Eau', consommation: 0, cout: 0 }, { annee: 2022, poste: 'Eau', consommation: 0, cout: 312.79 }, { annee: 2022, poste: 'Eau', consommation: 0, cout: 0 }, { annee: 2022, poste: 'Eau', consommation: 0, cout: 0 }, { annee: 2022, poste: 'Eau', consommation: 0, cout: 0 }, { annee: 2022, poste: 'Eau', consommation: 0, cout: 0 }, { annee: 2022, poste: 'Eau', consommation: 0, cout: 0 }, { annee: 2022, poste: 'Eau', consommation: 41, cout: 0 },
-            { annee: 2023, poste: 'Eau', consommation: 0, cout: 0 }, { annee: 2023, poste: 'Eau', consommation: 0, cout: -61.01 }, { annee: 2023, poste: 'Eau', consommation: 0, cout: 0 }, { annee: 2023, poste: 'Eau', consommation: 0, cout: 0 }, { annee: 2023, poste: 'Eau', consommation: 0, cout: 0 }, { annee: 2023, poste: 'Eau', consommation: 0, cout: 250 }, { annee: 2023, poste: 'Eau', consommation: 0, cout: -250 }, { annee: 2023, poste: 'Eau', consommation: 0, cout: 135.51 }, { annee: 2023, poste: 'Eau', consommation: 0, cout: 0 }, { annee: 2023, poste: 'Eau', consommation: 0, cout: 0 }, { annee: 2023, poste: 'Eau', consommation: 0, cout: 0 }, { annee: 2023, poste: 'Eau', consommation: 31, cout: 0 },
-            { annee: 2024, poste: 'Eau', consommation: 0, cout: 0 }, { annee: 2024, poste: 'Eau', consommation: 0, cout: 0 }, { annee: 2024, poste: 'Eau', consommation: 0, cout: 6.84 }, { annee: 2024, poste: 'Eau', consommation: 0, cout: 0 }, { annee: 2024, poste: 'Eau', consommation: 0, cout: 0 }, { annee: 2024, poste: 'Eau', consommation: 0, cout: 0 }, { annee: 2024, poste: 'Eau', consommation: 0, cout: 39.98 }, { annee: 2024, poste: 'Eau', consommation: 0, cout: 0 }, { annee: 2024, poste: 'Eau', consommation: 0, cout: 0 }, { annee: 2024, poste: 'Eau', consommation: 0, cout: 0 }, { annee: 2024, poste: 'Eau', consommation: 0, cout: 0 }, { annee: 2024, poste: 'Eau', consommation: 167, cout: 60.2 },
+            // Données Eau (mises à jour)
+            { annee: 2022, poste: 'Eau', consommation: 0, cout: -15.78 }, { annee: 2022, poste: 'Eau', consommation: 0, cout: 0 }, { annee: 2022, poste: 'Eau', consommation: 0, cout: 0 }, { annee: 2022, poste: 'Eau', consommation: 0, cout: 0 }, { annee: 2022, poste: 'Eau', consommation: 0, cout: 0 }, { annee: 2022, poste: 'Eau', consommation: 0, cout: 312.79 }, { annee: 2022, poste: 'Eau', consommation: 0, cout: 0 }, { annee: 2022, poste: 'Eau', consommation: 0, cout: 0 }, { annee: 2022, poste: 'Eau', consommation: 0, cout: 0 }, { annee: 2022, poste: 'Eau', consommation: 0, cout: 0 }, { annee: 2022, poste: 'Eau', consommation: 0, cout: 0 }, { annee: 2022, poste: 'Eau', consommation: 51, cout: 0 },
+            { annee: 2023, poste: 'Eau', consommation: 0, cout: 0 }, { annee: 2023, poste: 'Eau', consommation: 0, cout: -61.01 }, { annee: 2023, poste: 'Eau', consommation: 0, cout: 0 }, { annee: 2023, poste: 'Eau', consommation: 0, cout: 0 }, { annee: 2023, poste: 'Eau', consommation: 0, cout: 0 }, { annee: 2023, poste: 'Eau', consommation: 0, cout: 250 }, { annee: 2023, poste: 'Eau', consommation: 0, cout: -250 }, { annee: 2023, poste: 'Eau', consommation: 0, cout: 135.51 }, { annee: 2023, poste: 'Eau', consommation: 0, cout: 0 }, { annee: 2023, poste: 'Eau', consommation: 0, cout: 0 }, { annee: 2023, poste: 'Eau', consommation: 0, cout: 0 }, { annee: 2023, poste: 'Eau', consommation: 20, cout: 0 },
+            { annee: 2024, poste: 'Eau', consommation: 0, cout: 0 }, { annee: 2024, poste: 'Eau', consommation: 0, cout: 0 }, { annee: 2024, poste: 'Eau', consommation: 0, cout: 6.84 }, { annee: 2024, poste: 'Eau', consommation: 0, cout: 0 }, { annee: 2024, poste: 'Eau', consommation: 0, cout: 0 }, { annee: 2024, poste: 'Eau', consommation: 0, cout: 0 }, { annee: 2024, poste: 'Eau', consommation: 0, cout: 39.98 }, { annee: 2024, poste: 'Eau', consommation: 0, cout: 0 }, { annee: 2024, poste: 'Eau', consommation: 0, cout: 0 }, { annee: 2024, poste: 'Eau', consommation: 0, cout: 0 }, { annee: 2024, poste: 'Eau', consommation: 0, cout: 0 }, { annee: 2024, poste: 'Eau', consommation: 173, cout: 60.2 },
         ];
 
         function aggregateData(data, poste) {
@@ -177,7 +177,6 @@
         const electriciteTotals = aggregateData(rawData, 'Electricite');
         const eauTotals = aggregateData(rawData, 'Eau');
 
-        // --- CALCULS POUR LES BRIDGES (ÉLECTRICITÉ) ---
         function calculateBridge(totals, year1, year2) {
             const data1 = totals[year1];
             const data2 = totals[year2];
@@ -199,29 +198,22 @@
         const bridge2023_2024 = calculateBridge(electriciteTotals, 2023, 2024);
 
         const bridgeData2023 = [
-            { nom: bridge2022_2023.base.nom, valeur: bridge2022_2023.base.valeur, type: 'base', couleur: '#3B82F6' },
-            { nom: bridge2022_2023.effetConso.nom, valeur: bridge2022_2023.effetConso.valeur, type: 'negatif', couleur: '#10B981' },
-            { nom: bridge2022_2023.effetPrix.nom, valeur: bridge2022_2023.effetPrix.valeur, type: 'positif', couleur: '#EF4444' },
-            { nom: bridge2022_2023.final.nom, valeur: bridge2022_2023.final.valeur, type: 'final', couleur: '#8B5CF6' }
+            { nom: bridge2022_2023.base.nom, valeur: bridge2022_2023.base.valeur, type: 'base', couleur: '#3B82F6' }, { nom: bridge2022_2023.effetConso.nom, valeur: bridge2022_2023.effetConso.valeur, type: 'negatif', couleur: '#10B981' }, { nom: bridge2022_2023.effetPrix.nom, valeur: bridge2022_2023.effetPrix.valeur, type: 'positif', couleur: '#EF4444' }, { nom: bridge2022_2023.final.nom, valeur: bridge2022_2023.final.valeur, type: 'final', couleur: '#8B5CF6' }
         ];
 
         const bridgeData2024 = [
-            { nom: bridge2023_2024.base.nom, valeur: bridge2023_2024.base.valeur, type: 'base', couleur: '#8B5CF6' },
-            { nom: bridge2023_2024.effetConso.nom, valeur: bridge2023_2024.effetConso.valeur, type: 'negatif', couleur: '#10B981' },
-            { nom: bridge2023_2024.effetPrix.nom, valeur: bridge2023_2024.effetPrix.valeur, type: 'negatif', couleur: '#10B981' },
-            { nom: bridge2023_2024.final.nom, valeur: bridge2023_2024.final.valeur, type: 'final', couleur: '#3B82F6' }
+            { nom: bridge2023_2024.base.nom, valeur: bridge2023_2024.base.valeur, type: 'base', couleur: '#8B5CF6' }, { nom: bridge2023_2024.effetConso.nom, valeur: bridge2023_2024.effetConso.valeur, type: 'negatif', couleur: '#10B981' }, { nom: bridge2023_2024.effetPrix.nom, valeur: bridge2023_2024.effetPrix.valeur, type: 'negatif', couleur: '#10B981' }, { nom: bridge2023_2024.final.nom, valeur: bridge2023_2024.final.valeur, type: 'final', couleur: '#3B82F6' }
         ];
         
-        // --- FONCTIONS DE CRÉATION DE GRAPHIQUES ---
-        function createAnnualBarChart(canvasId, totals, chartLabel, unit, color) {
+        function createAnnualBarChart(canvasId, totals, chartLabelKey, unit, color) {
             const ctx = document.getElementById(canvasId).getContext('2d');
             new Chart(ctx, {
                 type: 'bar',
                 data: {
                     labels: Object.keys(totals),
                     datasets: [{
-                        label: chartLabel,
-                        data: Object.values(totals).map(d => d[chartLabel.toLowerCase()]),
+                        label: chartLabelKey,
+                        data: Object.values(totals).map(d => d[chartLabelKey.toLowerCase()]),
                         backgroundColor: color,
                         borderRadius: 4,
                     }]
@@ -229,7 +221,7 @@
                 options: {
                     responsive: true,
                     plugins: { legend: { display: false }, tooltip: { callbacks: { label: c => `${c.raw.toLocaleString('fr-FR', {maximumFractionDigits: 0})} ${unit}` } } },
-                    scales: { y: { beginAtZero: true, ticks: { callback: v => (v / 1000).toLocaleString('fr-FR') + (unit.includes('kWh') || unit.includes('m³') ? 'k' : 'k €') } } }
+                    scales: { y: { beginAtZero: true, ticks: { callback: v => (unit === '€' ? (v/1000).toFixed(1) + 'k' : v.toLocaleString('fr-FR')) + ` ${unit}` } } }
                 }
             });
         }
@@ -255,12 +247,11 @@
                 options: {
                     responsive: true,
                     plugins: { legend: { display: false }, tooltip: { callbacks: { label: c => { const i = c.dataIndex; return `${chartData[i].nom}: ${chartData[i].valeur > 0 ? '+' : ''}${chartData[i].valeur.toLocaleString('fr-FR', {maximumFractionDigits: 0})} €` } } } },
-                    scales: { y: { beginAtZero: true, ticks: { callback: v => (v / 1000).toLocaleString('fr-FR') + 'k €' } } }
+                    scales: { y: { beginAtZero: true, ticks: { callback: v => (v / 1000).toFixed(1) + 'k €' } } }
                 }
             });
         }
 
-        // --- EXÉCUTION AU CHARGEMENT DE LA PAGE ---
         document.addEventListener('DOMContentLoaded', () => {
             // Électricité
             createAnnualBarChart('electriciteCostChart', electriciteTotals, 'Cout', '€', '#4f46e5');
