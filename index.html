@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rapport d'Audit RSE - Analyse Énergétique 2022-2024</title>
+    <!-- Inclure Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Inclure la bibliothèque de graphiques Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Inclure la bibliothèque d'icônes Lucide -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="bg-gray-100">
+
+    <div class="max-w-7xl mx-auto p-4 sm:p-6 lg:p-8">
+        <!-- En-tête -->
+        <header class="bg-white p-8 rounded-xl shadow-md mb-8">
+            <div class="flex items-center justify-center mb-4">
+                <i data-lucide="leaf" class="h-10 w-10 text-green-600 mr-4"></i>
+                <h1 class="text-3xl sm:text-4xl font-bold text-gray-800 text-center">Rapport d'Audit RSE</h1>
+            </div>
+            <p class="text-center text-xl text-gray-600">Analyse des consommations Électricité & Eau 2022-2024</p>
+        </header>
+
+        <!-- ================================================================= -->
+        <!--                  ANALYSE DU POSTE ÉLECTRICITÉ                     -->
+        <!-- ================================================================= -->
+        <section id="electricite" class="mb-12">
+            <h2 class="text-3xl font-bold text-indigo-700 mb-6 pb-2 border-b-4 border-indigo-200 flex items-center">
+                <i data-lucide="zap" class="h-8 w-8 mr-3"></i>
+                Analyse du Poste Électricité
+            </h2>
+
+            <!-- Acte 1: Le Constat -->
+            <div class="bg-white p-6 rounded-xl shadow-md mb-8">
+                <h3 class="text-2xl font-bold text-center text-gray-800 mb-6">Acte 1 : Le Constat Annuel</h3>
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    <div>
+                        <h4 class="text-lg font-semibold mb-4 text-center">Évolution du Coût Annuel (€)</h4>
+                        <canvas id="electriciteCostChart"></canvas>
+                    </div>
+                    <div>
+                        <h4 class="text-lg font-semibold mb-4 text-center">Évolution de la Consommation Annuelle (kWh)</h4>
+                        <canvas id="electriciteConsumptionChart"></canvas>
+                    </div>
+                </div>
+                <p class="text-center text-gray-600 mt-6 italic">
+                    <strong>Le paradoxe de 2023 :</strong> Une baisse de la consommation mais une explosion spectaculaire des coûts. Pourquoi ?
+                </p>
+            </div>
+
+            <!-- Acte 2: L'Explication -->
+            <div class="bg-white p-6 rounded-xl shadow-md mb-8">
+                <h3 class="text-2xl font-bold text-center text-gray-800 mb-6">Acte 2 : L'Explication par les Écarts</h3>
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    <div>
+                        <h4 class="text-lg font-semibold mb-4 text-center">Analyse 2022 → 2023 : La Résilience Face à la Crise</h4>
+                        <canvas id="electriciteBridge2023"></canvas>
+                    </div>
+                    <div>
+                        <h4 class="text-lg font-semibold mb-4 text-center">Analyse 2023 → 2024 : La Double Performance</h4>
+                        <canvas id="electriciteBridge2024"></canvas>
+                    </div>
+                </div>
+                <p class="text-center text-gray-600 mt-6 italic">
+                    <strong>La réponse :</strong> Les graphiques en pont dissocient nos efforts (Effet Conso) de l'impact subi du marché (Effet Prix).
+                </p>
+            </div>
+            
+            <!-- Acte 3: Synthèse -->
+            <div class="bg-white p-6 rounded-xl shadow-md">
+                <h3 class="text-2xl font-bold text-center text-gray-800 mb-6">Acte 3 : Synthèse & Recommandations (Électricité)</h3>
+                <div class="space-y-4">
+                    <div class="flex items-start p-4 bg-green-50 rounded-lg border-l-4 border-green-500">
+                        <i data-lucide="shield-check" class="h-6 w-6 text-green-700 mr-4 mt-1 flex-shrink-0"></i>
+                        <div>
+                            <h5 class="font-bold text-green-800">Succès de la Sobriété</h5>
+                            <p class="text-gray-700">Nos actions ont permis une baisse continue de la consommation, passant de 165k kWh en 2022 à 131k kWh en 2024, soit une **réduction de 20.6%**. L'effet cumulé de ces efforts a généré une **économie directe de plus de 6 700 €** sur la période.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start p-4 bg-red-50 rounded-lg border-l-4 border-red-500">
+                        <i data-lucide="alert-triangle" class="h-6 w-6 text-red-700 mr-4 mt-1 flex-shrink-0"></i>
+                        <div>
+                            <h5 class="font-bold text-red-800">Résilience face à la Volatilité</h5>
+                            <p class="text-gray-700">En 2023, la flambée du prix unitaire (+134%) a masqué nos efforts. Notre analyse montre que sans notre baisse de consommation, le surcoût aurait été encore plus élevé. Notre démarche RSE a agi comme un **amortisseur économique**.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start p-4 bg-blue-50 rounded-lg border-l-4 border-blue-500">
+                        <i data-lucide="bar-chart-2" class="h-6 w-6 text-blue-700 mr-4 mt-1 flex-shrink-0"></i>
+                        <div>
+                            <h5 class="font-bold text-blue-800">Recommandation</h5>
+                            <p class="text-gray-700">Poursuivre et intensifier les actions de sobriété énergétique. C'est notre levier de contrôle le plus puissant pour maîtriser les coûts et renforcer notre résilience face à un marché qui restera volatile.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ================================================================= -->
+        <!--                    ANALYSE DU POSTE EAU                           -->
+        <!-- ================================================================= -->
+        <section id="eau">
+            <h2 class="text-3xl font-bold text-sky-700 mb-6 pb-2 border-b-4 border-sky-200 flex items-center">
+                <i data-lucide="droplet" class="h-8 w-8 mr-3"></i>
+                Analyse du Poste Eau
+            </h2>
+            <div class="bg-white p-6 rounded-xl shadow-md">
+                <h3 class="text-2xl font-bold text-center text-gray-800 mb-6">Constat Annuel (2022-2024)</h3>
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    <div>
+                        <h4 class="text-lg font-semibold mb-4 text-center">Évolution du Coût Annuel (€)</h4>
+                        <canvas id="eauCostChart"></canvas>
+                    </div>
+                    <div>
+                        <h4 class="text-lg font-semibold mb-4 text-center">Évolution de la Consommation Annuelle (m³)</h4>
+                        <canvas id="eauConsumptionChart"></canvas>
+                    </div>
+                </div>
+                 <div class="mt-8 space-y-4">
+                    <div class="flex items-start p-4 bg-yellow-50 rounded-lg border-l-4 border-yellow-500">
+                        <i data-lucide="search" class="h-6 w-6 text-yellow-700 mr-4 mt-1 flex-shrink-0"></i>
+                        <div>
+                            <h5 class="font-bold text-yellow-800">Analyse & Observations</h5>
+                            <p class="text-gray-700">La consommation d'eau est globalement très faible. On note une consommation quasi-nulle sur la majeure partie de la période, avec une hausse notable en 2024 (167 m³). Les coûts sont principalement des frais fixes ou des régularisations, et ne sont pas toujours corrélés à une consommation mensuelle.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start p-4 bg-blue-50 rounded-lg border-l-4 border-blue-500">
+                        <i data-lucide="info" class="h-6 w-6 text-blue-700 mr-4 mt-1 flex-shrink-0"></i>
+                        <div>
+                            <h5 class="font-bold text-blue-800">Note sur l'Analyse en Pont</h5>
+                            <p class="text-gray-700">En raison de la faible consommation et de la nature des coûts (souvent forfaitaires ou décorrélés), une analyse en pont (bridge) ne serait pas statistiquement pertinente pour ce poste. Elle risquerait de donner des prix unitaires extrêmes et non représentatifs.</p>
+                        </div>
+                    </div>
+                     <div class="flex items-start p-4 bg-green-50 rounded-lg border-l-4 border-green-500">
+                        <i data-lucide="target" class="h-6 w-6 text-green-700 mr-4 mt-1 flex-shrink-0"></i>
+                        <div>
+                            <h5 class="font-bold text-green-800">Recommandation</h5>
+                            <p class="text-gray-700">Continuer de surveiller la consommation. L'augmentation en 2024 doit être comprise : est-elle liée à une nouvelle activité ou s'agit-il d'un point d'attention (ex: fuite potentielle) ? Maintenir une vigilance active est la meilleure stratégie.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <script>
+        // --- ACTIVATION DES ICÔNES ---
+        lucide.createIcons();
+        
+        // --- TRAITEMENT DES DONNÉES ET CALCULS ---
+        const rawData = [
+            // Électricité
+            { annee: 2022, poste: 'Electricite', consommation: 23489, cout: -2032 }, { annee: 2022, poste: 'Electricite', consommation: 31173, cout: 0 }, { annee: 2022, poste: 'Electricite', consommation: 15476, cout: 11292.93 }, { annee: 2022, poste: 'Electricite', consommation: 11898, cout: 1529.68 }, { annee: 2022, poste: 'Electricite', consommation: 9830, cout: 1048.56 }, { annee: 2022, poste: 'Electricite', consommation: 9001, cout: 1426.86 }, { annee: 2022, poste: 'Electricite', consommation: 10326, cout: 609.42 }, { annee: 2022, poste: 'Electricite', consommation: 11634, cout: 1214.25 }, { annee: 2022, poste: 'Electricite', consommation: 8043, cout: 891.17 }, { annee: 2022, poste: 'Electricite', consommation: 7924, cout: 867.4 }, { annee: 2022, poste: 'Electricite', consommation: 7274, cout: 991.72 }, { annee: 2022, poste: 'Electricite', consommation: 19823, cout: 4738.4 },
+            { annee: 2023, poste: 'Electricite', consommation: 17038, cout: -1777 }, { annee: 2023, poste: 'Electricite', consommation: 31680, cout: 0 }, { annee: 2023, poste: 'Electricite', consommation: 19484, cout: 0 }, { annee: 2023, poste: 'Electricite', consommation: 9927, cout: 0 }, { annee: 2023, poste: 'Electricite', consommation: 7308, cout: 29773.79 }, { annee: 2023, poste: 'Electricite', consommation: 5715, cout: 681.27 }, { annee: 2023, poste: 'Electricite', consommation: 5430, cout: 181.92 }, { annee: 2023, poste: 'Electricite', consommation: 5313, cout: 431.95 }, { annee: 2023, poste: 'Electricite', consommation: 6403, cout: 500.99 }, { annee: 2023, poste: 'Electricite', consommation: 6077, cout: 480.28 }, { annee: 2023, poste: 'Electricite', consommation: 7803, cout: 2055.59 }, { annee: 2023, poste: 'Electricite', consommation: 21044, cout: 13313.89 },
+            { annee: 2024, poste: 'Electricite', consommation: 22635, cout: -4314 }, { annee: 2024, poste: 'Electricite', consommation: 22430, cout: 11070.67 }, { annee: 2024, poste: 'Electricite', consommation: 14283, cout: 1917.53 }, { annee: 2024, poste: 'Electricite', consommation: 7579, cout: 1454.37 }, { annee: 2024, poste: 'Electricite', consommation: 6485, cout: 991.51 }, { annee: 2024, poste: 'Electricite', consommation: 6761, cout: -4666 }, { annee: 2024, poste: 'Electricite', consommation: 6346, cout: 419.13 }, { annee: 2024, poste: 'Electricite', consommation: 7388, cout: 1090.75 }, { annee: 2024, poste: 'Electricite', consommation: 7180, cout: 1078.38 }, { annee: 2024, poste: 'Electricite', consommation: 6531, cout: 995.49 }, { annee: 2024, poste: 'Electricite', consommation: 7295, cout: 1336.92 }, { annee: 2024, poste: 'Electricite', consommation: 16759, cout: 5698.02 },
+            // Eau
+            { annee: 2022, poste: 'Eau', consommation: 0, cout: -15.78 }, { annee: 2022, poste: 'Eau', consommation: 0, cout: 0 }, { annee: 2022, poste: 'Eau', consommation: 0, cout: 0 }, { annee: 2022, poste: 'Eau', consommation: 0, cout: 0 }, { annee: 2022, poste: 'Eau', consommation: 0, cout: 0 }, { annee: 2022, poste: 'Eau', consommation: 0, cout: 312.79 }, { annee: 2022, poste: 'Eau', consommation: 0, cout: 0 }, { annee: 2022, poste: 'Eau', consommation: 0, cout: 0 }, { annee: 2022, poste: 'Eau', consommation: 0, cout: 0 }, { annee: 2022, poste: 'Eau', consommation: 0, cout: 0 }, { annee: 2022, poste: 'Eau', consommation: 0, cout: 0 }, { annee: 2022, poste: 'Eau', consommation: 41, cout: 0 },
+            { annee: 2023, poste: 'Eau', consommation: 0, cout: 0 }, { annee: 2023, poste: 'Eau', consommation: 0, cout: -61.01 }, { annee: 2023, poste: 'Eau', consommation: 0, cout: 0 }, { annee: 2023, poste: 'Eau', consommation: 0, cout: 0 }, { annee: 2023, poste: 'Eau', consommation: 0, cout: 0 }, { annee: 2023, poste: 'Eau', consommation: 0, cout: 250 }, { annee: 2023, poste: 'Eau', consommation: 0, cout: -250 }, { annee: 2023, poste: 'Eau', consommation: 0, cout: 135.51 }, { annee: 2023, poste: 'Eau', consommation: 0, cout: 0 }, { annee: 2023, poste: 'Eau', consommation: 0, cout: 0 }, { annee: 2023, poste: 'Eau', consommation: 0, cout: 0 }, { annee: 2023, poste: 'Eau', consommation: 31, cout: 0 },
+            { annee: 2024, poste: 'Eau', consommation: 0, cout: 0 }, { annee: 2024, poste: 'Eau', consommation: 0, cout: 0 }, { annee: 2024, poste: 'Eau', consommation: 0, cout: 6.84 }, { annee: 2024, poste: 'Eau', consommation: 0, cout: 0 }, { annee: 2024, poste: 'Eau', consommation: 0, cout: 0 }, { annee: 2024, poste: 'Eau', consommation: 0, cout: 0 }, { annee: 2024, poste: 'Eau', consommation: 0, cout: 39.98 }, { annee: 2024, poste: 'Eau', consommation: 0, cout: 0 }, { annee: 2024, poste: 'Eau', consommation: 0, cout: 0 }, { annee: 2024, poste: 'Eau', consommation: 0, cout: 0 }, { annee: 2024, poste: 'Eau', consommation: 0, cout: 0 }, { annee: 2024, poste: 'Eau', consommation: 167, cout: 60.2 },
+        ];
+
+        function aggregateData(data, poste) {
+            const totals = {};
+            data.filter(d => d.poste === poste).forEach(d => {
+                if (!totals[d.annee]) {
+                    totals[d.annee] = { consommation: 0, cout: 0 };
+                }
+                totals[d.annee].consommation += d.consommation;
+                totals[d.annee].cout += d.cout;
+            });
+            return totals;
+        }
+
+        const electriciteTotals = aggregateData(rawData, 'Electricite');
+        const eauTotals = aggregateData(rawData, 'Eau');
+
+        // --- CALCULS POUR LES BRIDGES (ÉLECTRICITÉ) ---
+        function calculateBridge(totals, year1, year2) {
+            const data1 = totals[year1];
+            const data2 = totals[year2];
+            const prix1 = data1.consommation > 0 ? data1.cout / data1.consommation : 0;
+            const prix2 = data2.consommation > 0 ? data2.cout / data2.consommation : 0;
+            
+            const effetConso = (data2.consommation - data1.consommation) * prix1;
+            const effetPrix = (prix2 - prix1) * data2.consommation;
+            
+            return {
+                base: { nom: `Coût ${year1}`, valeur: data1.cout },
+                effetConso: { nom: 'Effet Conso', valeur: effetConso },
+                effetPrix: { nom: 'Effet Prix', valeur: effetPrix },
+                final: { nom: `Coût ${year2}`, valeur: data2.cout }
+            };
+        }
+
+        const bridge2022_2023 = calculateBridge(electriciteTotals, 2022, 2023);
+        const bridge2023_2024 = calculateBridge(electriciteTotals, 2023, 2024);
+
+        const bridgeData2023 = [
+            { nom: bridge2022_2023.base.nom, valeur: bridge2022_2023.base.valeur, type: 'base', couleur: '#3B82F6' },
+            { nom: bridge2022_2023.effetConso.nom, valeur: bridge2022_2023.effetConso.valeur, type: 'negatif', couleur: '#10B981' },
+            { nom: bridge2022_2023.effetPrix.nom, valeur: bridge2022_2023.effetPrix.valeur, type: 'positif', couleur: '#EF4444' },
+            { nom: bridge2022_2023.final.nom, valeur: bridge2022_2023.final.valeur, type: 'final', couleur: '#8B5CF6' }
+        ];
+
+        const bridgeData2024 = [
+            { nom: bridge2023_2024.base.nom, valeur: bridge2023_2024.base.valeur, type: 'base', couleur: '#8B5CF6' },
+            { nom: bridge2023_2024.effetConso.nom, valeur: bridge2023_2024.effetConso.valeur, type: 'negatif', couleur: '#10B981' },
+            { nom: bridge2023_2024.effetPrix.nom, valeur: bridge2023_2024.effetPrix.valeur, type: 'negatif', couleur: '#10B981' },
+            { nom: bridge2023_2024.final.nom, valeur: bridge2023_2024.final.valeur, type: 'final', couleur: '#3B82F6' }
+        ];
+        
+        // --- FONCTIONS DE CRÉATION DE GRAPHIQUES ---
+        function createAnnualBarChart(canvasId, totals, chartLabel, unit, color) {
+            const ctx = document.getElementById(canvasId).getContext('2d');
+            new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: Object.keys(totals),
+                    datasets: [{
+                        label: chartLabel,
+                        data: Object.values(totals).map(d => d[chartLabel.toLowerCase()]),
+                        backgroundColor: color,
+                        borderRadius: 4,
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    plugins: { legend: { display: false }, tooltip: { callbacks: { label: c => `${c.raw.toLocaleString('fr-FR', {maximumFractionDigits: 0})} ${unit}` } } },
+                    scales: { y: { beginAtZero: true, ticks: { callback: v => (v / 1000).toLocaleString('fr-FR') + (unit.includes('kWh') || unit.includes('m³') ? 'k' : 'k €') } } }
+                }
+            });
+        }
+
+        function createBridgeChart(canvasId, chartData) {
+            const ctx = document.getElementById(canvasId).getContext('2d');
+            const data = {
+                labels: chartData.map(d => d.nom),
+                datasets: [{
+                    data: chartData.map((d, i, arr) => {
+                        if (d.type === 'base' || d.type === 'final') return [0, d.valeur];
+                        const prevValue = arr.slice(0, i).reduce((sum, curr) => sum + curr.valeur, 0);
+                        return [prevValue, prevValue + d.valeur];
+                    }),
+                    backgroundColor: chartData.map(d => d.couleur),
+                    borderRadius: 4,
+                    borderSkipped: false,
+                }]
+            };
+            new Chart(ctx, {
+                type: 'bar',
+                data: data,
+                options: {
+                    responsive: true,
+                    plugins: { legend: { display: false }, tooltip: { callbacks: { label: c => { const i = c.dataIndex; return `${chartData[i].nom}: ${chartData[i].valeur > 0 ? '+' : ''}${chartData[i].valeur.toLocaleString('fr-FR', {maximumFractionDigits: 0})} €` } } } },
+                    scales: { y: { beginAtZero: true, ticks: { callback: v => (v / 1000).toLocaleString('fr-FR') + 'k €' } } }
+                }
+            });
+        }
+
+        // --- EXÉCUTION AU CHARGEMENT DE LA PAGE ---
+        document.addEventListener('DOMContentLoaded', () => {
+            // Électricité
+            createAnnualBarChart('electriciteCostChart', electriciteTotals, 'Cout', '€', '#4f46e5');
+            createAnnualBarChart('electriciteConsumptionChart', electriciteTotals, 'Consommation', 'kWh', '#0d9488');
+            createBridgeChart('electriciteBridge2023', bridgeData2023);
+            createBridgeChart('electriciteBridge2024', bridgeData2024);
+
+            // Eau
+            createAnnualBarChart('eauCostChart', eauTotals, 'Cout', '€', '#0ea5e9');
+            createAnnualBarChart('eauConsumptionChart', eauTotals, 'Consommation', 'm³', '#0284c7');
+        });
+    </script>
+</body>
+</html>
